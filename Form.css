@@ -1,14 +1,4 @@
-label{
-  font-size:20px;
-  font-weight:bold;
-  margin-left: 500px;
-}
-.size{
-  margin-left: 500px;
-  width: 500px;
-  height: 30px;
-  margin-bottom: 5px;
-}
+
 button{
   background-color:rgba(0, 215, 255, 1);
   color: white;
@@ -17,11 +7,5 @@ button{
   margin: 10px 0px;
   cursor: pointer;
   border-color: rgba(0, 215, 255, 1);
-  margin-left: 520px;
-}
-h6{
-  margin:0px;
-  margin-left: 520px;
-  margin-top: 0px;
-  color: grey;
+
 }
