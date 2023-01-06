@@ -1,0 +1,12 @@
+create config object
+add any custom setup class (to a list, add the class)
+setup startup options object with defaults for db string, admin user, admin password, roles list, log file
+init a startup object and pass the startup options
+call the startup object chain_init
+finally creates a GlobalContext object that saves the configuration options for global use
+
+chains:
+log file handler
+database connection url handler
+default roles handler
+admin handler
