@@ -255,7 +255,7 @@ class AdminAccountHandler(AbstractHandler):
                 options.log.debug(f"Found admins: {results}")
                 if not results:
                     options.log.debug("Empty admin set. Initializing admin accounts.")
-                    admin = User.create_hashed_user(options.admin_user, options.admin_pw)
+                    admin = User.create_hashed_user(username=options.admin_user, password=options.admin_pw)
                     statement = select(Scope).filter_by(scope="admin")
                     scope: Scope = session.execute(statement).scalar_one()
                     admin.scopes.append(scope)

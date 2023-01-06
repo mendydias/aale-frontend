@@ -39,7 +39,8 @@ class User(DeclarativeBase):
 
     scopes = relationship("Scope", secondary=user_scopes)
 
-    def create_hashed_user(self, username: str, password: str):
+    @staticmethod
+    def create_hashed_user(username: str, password: str):
         """
         Creates a user with an encrypted password.
 
