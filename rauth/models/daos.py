@@ -53,11 +53,12 @@ class User(DeclarativeBase):
         encrypted_password = bcrypt.hashpw(password=password.encode("utf-8"), salt=salt)
         return User(username=username, password=encrypted_password, salt=salt)
 
+
 class Client(DeclarativeBase):
     """
     Represents the client application that authenticates using the authorization server.
     """
-    
+
     client_id = Column(String(25), primary_key=True)
     client_name = Column(String(100), nullable=True)
     client_description = Column(String())
