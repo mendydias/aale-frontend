@@ -89,3 +89,191 @@ Defaulting to sqlite:///
 2023-01-05 15:40:18,725 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001C7BB9A9420>,)]
 2023-01-05 15:40:18,725 DEBUG Not setting up the admin account.
 2023-01-05 15:40:18,728 INFO Application ready.
+2023-01-07 10:58:27,449 INFO Set up log file. Logging to default.log
+2023-01-07 10:58:27,449 DEBUG Starting application bootup.
+2023-01-07 10:58:27,710 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:01:00,890 INFO Set up log file. Logging to default.log
+2023-01-07 11:01:00,891 DEBUG Starting application bootup.
+2023-01-07 11:01:00,946 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:01:01,018 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:01:01,030 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:01:01,041 DEBUG Found admins: []
+2023-01-07 11:01:01,041 DEBUG Empty admin set. Initializing admin accounts.
+2023-01-07 11:01:01,306 INFO Application ready.
+2023-01-07 11:06:21,550 INFO Set up log file. Logging to default.log
+2023-01-07 11:06:21,550 DEBUG Starting application bootup.
+2023-01-07 11:06:21,605 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:06:21,648 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:06:21,651 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:06:21,660 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000002A3D5550B20>,)]
+2023-01-07 11:06:21,660 DEBUG Not setting up the admin account.
+2023-01-07 11:06:21,665 INFO Application ready.
+2023-01-07 11:06:46,902 INFO Set up log file. Logging to default.log
+2023-01-07 11:06:46,903 DEBUG Starting application bootup.
+2023-01-07 11:06:46,934 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:06:46,969 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:06:46,972 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:06:46,980 DEBUG Found admins: [(<rauth.models.daos.User object at 0x0000018D24CCCB20>,)]
+2023-01-07 11:06:46,980 DEBUG Not setting up the admin account.
+2023-01-07 11:06:46,983 INFO Application ready.
+2023-01-07 11:07:33,144 INFO Set up log file. Logging to default.log
+2023-01-07 11:07:33,144 DEBUG Starting application bootup.
+2023-01-07 11:07:33,187 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:07:33,223 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:07:33,227 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:07:33,234 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000002805576CB20>,)]
+2023-01-07 11:07:33,234 DEBUG Not setting up the admin account.
+2023-01-07 11:07:33,238 INFO Application ready.
+2023-01-07 11:08:05,836 INFO Set up log file. Logging to default.log
+2023-01-07 11:08:05,836 DEBUG Starting application bootup.
+2023-01-07 11:08:05,868 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:08:05,905 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:08:05,909 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:08:05,916 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001ECD0AF8B20>,)]
+2023-01-07 11:08:05,917 DEBUG Not setting up the admin account.
+2023-01-07 11:08:05,920 INFO Application ready.
+2023-01-07 11:08:27,240 INFO Set up log file. Logging to default.log
+2023-01-07 11:08:27,240 DEBUG Starting application bootup.
+2023-01-07 11:08:27,278 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:08:27,321 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:08:27,325 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:08:27,332 DEBUG Found admins: [(<rauth.models.daos.User object at 0x0000027CE0EFCB20>,)]
+2023-01-07 11:08:27,332 DEBUG Not setting up the admin account.
+2023-01-07 11:08:27,336 INFO Application ready.
+2023-01-07 11:11:21,433 INFO Set up log file. Logging to default.log
+2023-01-07 11:11:21,433 DEBUG Starting application bootup.
+2023-01-07 11:11:21,481 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:11:21,525 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:11:21,528 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:11:21,540 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000002542834CB20>,)]
+2023-01-07 11:11:21,540 DEBUG Not setting up the admin account.
+2023-01-07 11:11:21,546 INFO Application ready.
+2023-01-07 11:11:26,880 INFO Set up log file. Logging to default.log
+2023-01-07 11:11:26,881 DEBUG Starting application bootup.
+2023-01-07 11:11:26,916 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:11:26,955 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:11:26,958 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:11:26,965 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001F3A68FCB20>,)]
+2023-01-07 11:11:26,965 DEBUG Not setting up the admin account.
+2023-01-07 11:11:26,968 INFO Application ready.
+2023-01-07 11:19:12,013 INFO Set up log file. Logging to default.log
+2023-01-07 11:19:12,014 DEBUG Starting application bootup.
+2023-01-07 11:19:12,046 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:19:12,086 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:19:12,089 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:19:12,096 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001EF5382CB80>,)]
+2023-01-07 11:19:12,097 DEBUG Not setting up the admin account.
+2023-01-07 11:19:12,100 INFO Application ready.
+2023-01-07 11:19:12,100 INFO Set up log file. Logging to default.log
+2023-01-07 11:19:12,100 DEBUG Starting application bootup.
+2023-01-07 11:19:12,102 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-07 11:19:12,132 DEBUG Setting up roles: ['user', 'admin']
+2023-01-07 11:19:12,136 WARNING Admin account not set. Defaulting to admin
+2023-01-07 11:19:12,142 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001EF5382E4A0>,)]
+2023-01-07 11:19:12,142 DEBUG Not setting up the admin account.
+2023-01-07 11:19:12,145 INFO Application ready.
+2023-01-11 01:38:25,523 INFO Set up log file. Logging to default.log
+2023-01-11 01:38:25,524 DEBUG Starting application bootup.
+2023-01-11 01:38:25,938 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:38:30,306 INFO Set up log file. Logging to default.log
+2023-01-11 01:38:30,306 DEBUG Starting application bootup.
+2023-01-11 01:38:30,307 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:38:34,373 INFO Set up log file. Logging to test.log
+2023-01-11 01:38:34,373 DEBUG Starting application bootup.
+2023-01-11 01:38:34,375 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:41:22,236 INFO Set up log file. Logging to default.log
+2023-01-11 01:41:22,237 DEBUG Starting application bootup.
+2023-01-11 01:41:22,301 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:41:22,398 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:41:22,405 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:41:22,464 DEBUG Found admins: [(<rauth.models.daos.User object at 0x00000238A136DB10>,)]
+2023-01-11 01:41:22,464 DEBUG Not setting up the admin account.
+2023-01-11 01:41:22,470 INFO Application ready.
+2023-01-11 01:41:22,472 INFO Set up log file. Logging to default.log
+2023-01-11 01:41:22,472 DEBUG Starting application bootup.
+2023-01-11 01:41:22,473 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:41:22,521 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:41:22,527 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:41:22,539 DEBUG Found admins: [(<rauth.models.daos.User object at 0x00000238A13C01F0>,)]
+2023-01-11 01:41:22,540 DEBUG Not setting up the admin account.
+2023-01-11 01:41:22,545 INFO Application ready.
+2023-01-11 01:41:22,546 INFO Set up log file. Logging to test.log
+2023-01-11 01:41:22,546 DEBUG Starting application bootup.
+2023-01-11 01:41:22,548 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:41:22,593 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:41:22,599 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:41:22,616 DEBUG Found admins: [(<rauth.models.daos.User object at 0x00000238A136E4A0>,)]
+2023-01-11 01:41:22,616 DEBUG Not setting up the admin account.
+2023-01-11 01:41:22,620 INFO Application ready.
+2023-01-11 01:42:42,792 INFO Set up log file. Logging to default.log
+2023-01-11 01:42:42,792 DEBUG Starting application bootup.
+2023-01-11 01:42:42,850 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:42:42,912 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:42:42,917 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:42:42,928 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001BE74F24C70>,)]
+2023-01-11 01:42:42,928 DEBUG Not setting up the admin account.
+2023-01-11 01:42:42,933 INFO Application ready.
+2023-01-11 01:42:42,934 INFO Set up log file. Logging to default.log
+2023-01-11 01:42:42,934 DEBUG Starting application bootup.
+2023-01-11 01:42:42,935 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:42:42,975 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:42:42,981 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:42:42,991 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001BE74F26590>,)]
+2023-01-11 01:42:42,991 DEBUG Not setting up the admin account.
+2023-01-11 01:42:42,996 INFO Application ready.
+2023-01-11 01:42:42,997 INFO Set up log file. Logging to test.log
+2023-01-11 01:42:42,998 DEBUG Starting application bootup.
+2023-01-11 01:42:42,999 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:42:43,036 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:42:43,040 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:42:43,049 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001BE74F27E50>,)]
+2023-01-11 01:42:43,049 DEBUG Not setting up the admin account.
+2023-01-11 01:42:43,053 INFO Application ready.
+2023-01-11 01:43:06,211 INFO Set up log file. Logging to default.log
+2023-01-11 01:43:06,211 DEBUG Starting application bootup.
+2023-01-11 01:43:06,260 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:06,311 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:06,315 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:06,323 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001F833E74C70>,)]
+2023-01-11 01:43:06,324 DEBUG Not setting up the admin account.
+2023-01-11 01:43:06,328 INFO Application ready.
+2023-01-11 01:43:06,329 INFO Set up log file. Logging to default.log
+2023-01-11 01:43:06,329 DEBUG Starting application bootup.
+2023-01-11 01:43:06,330 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:06,368 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:06,372 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:06,382 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001F833E76590>,)]
+2023-01-11 01:43:06,382 DEBUG Not setting up the admin account.
+2023-01-11 01:43:06,385 INFO Application ready.
+2023-01-11 01:43:06,386 INFO Set up log file. Logging to test.log
+2023-01-11 01:43:06,386 DEBUG Starting application bootup.
+2023-01-11 01:43:06,387 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:06,423 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:06,428 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:06,438 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001F833E77E50>,)]
+2023-01-11 01:43:06,439 DEBUG Not setting up the admin account.
+2023-01-11 01:43:06,443 INFO Application ready.
+2023-01-11 01:43:36,831 INFO Set up log file. Logging to default.log
+2023-01-11 01:43:36,832 DEBUG Starting application bootup.
+2023-01-11 01:43:36,899 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:36,953 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:36,958 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:36,968 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001CF86B6DB10>,)]
+2023-01-11 01:43:36,968 DEBUG Not setting up the admin account.
+2023-01-11 01:43:36,973 INFO Application ready.
+2023-01-11 01:43:36,974 INFO Set up log file. Logging to default.log
+2023-01-11 01:43:36,974 DEBUG Starting application bootup.
+2023-01-11 01:43:36,975 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:37,011 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:37,015 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:37,023 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001CF86BC01F0>,)]
+2023-01-11 01:43:37,023 DEBUG Not setting up the admin account.
+2023-01-11 01:43:37,027 INFO Application ready.
+2023-01-11 01:43:37,028 INFO Set up log file. Logging to test.log
+2023-01-11 01:43:37,028 DEBUG Starting application bootup.
+2023-01-11 01:43:37,029 DEBUG Setting up database to the url: mysql://root:root@localhost:3306/test
+2023-01-11 01:43:37,065 DEBUG Setting up roles: ['user', 'admin']
+2023-01-11 01:43:37,070 WARNING Admin account not set. Defaulting to admin
+2023-01-11 01:43:37,077 DEBUG Found admins: [(<rauth.models.daos.User object at 0x000001CF86B6E4A0>,)]
+2023-01-11 01:43:37,077 DEBUG Not setting up the admin account.
+2023-01-11 01:43:37,081 INFO Application ready.

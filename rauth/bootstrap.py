@@ -20,7 +20,7 @@ from typing import Any, List
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session, sessionmaker
 
-from .models.daos import Scope, User
+from .models.daos import Role, User
 from .handlers import Options, Handler, AbstractHandler
 
 
@@ -32,7 +32,7 @@ class StartupOptions(Options):
     db_string: str
     admin_user: str
     admin_pw: str
-    scopes_list: List[str]
+    roles_list: List[str]
     log_file: str
     log: Any
     engine: Any
@@ -78,7 +78,7 @@ class Config(object):
                 admin_user="admin",
                 admin_pw="admin",
                 log_file="default.log",
-                scopes_list=["user", "admin"],
+                roles_list=["user", "admin"],
                 log=None,
                 engine=None,
                 env="development",
@@ -99,11 +99,11 @@ class Config(object):
             ) from value_error
         self.startup_chain.insert(index + 1, handler)
 
-    def add_scopes(self, *scopes: List[str]):
+    def add_roles(self, *scopes: List[str]):
         """
         Append any scopes to the default scopes list.
         """
-        self.options.scopes_list.extend(scopes)
+        self.options.roles_list.extend(scopes)
 
     def __setup_chain__(self) -> None:
         for index, handler in enumerate(self.startup_chain):
@@ -150,21 +150,9 @@ class LogFileHandler(AbstractHandler):
         try:
             log_file = os.environ["OAUTH2_LOG_FILE"]
             options.log_file = log_file
-            if options.env == "development":
-                logging.basicConfig(
-                    filename=log_file,
-                    encoding="utf-8",
-                    level=logging.DEBUG,
-                    format="%(asctime)s %(levelname)s %(message)s",
-                )
-            else:
-                logging.basicConfig(
-                    filename=log_file,
-                    encoding="utf-8",
-                    level=logging.ERROR,
-                    format="%(asctime)s %(levelname)s %(message)s",
-                )
         except KeyError:
+            pass
+        finally:
             if options.env == "development":
                 logging.basicConfig(
                     filename=options.log_file,
@@ -179,7 +167,6 @@ class LogFileHandler(AbstractHandler):
                     level=logging.ERROR,
                     format="%(asctime)s %(levelname)s %(message)s",
                 )
-        finally:
             log = logging.getLogger("Bootstrap")
             options.log = log
             log.info("Set up log file. Logging to %s", options.log_file)
@@ -209,19 +196,19 @@ class DatabaseConnectionUrlHandler(AbstractHandler):
             self.__next_handler__.handle(options)
 
 
-class DefaultScopesHandler(AbstractHandler):
+class DefaultRolesHandler(AbstractHandler):
     """
-    Add the default scopes to the database
+    Add the default roles to the database
     """
 
     def handle(self, options: StartupOptions):
         with Session(options.engine) as session:
-            for scope in options.scopes_list:
-                statement = select(Scope).filter_by(scope=scope)
+            for role in options.roles_list:
+                statement = select(Role).filter_by(role=role)
                 result = session.execute(statement).all()
                 if not result:
-                    session.add(Scope(scope=scope))
-            options.log.debug(f"Setting up scopes: {options.scopes_list}")
+                    session.add(Role(role=role))
+            options.log.debug(f"Setting up roles: {options.roles_list}")
             session.commit()
         if self.__next_handler__ is not None:
             self.__next_handler__.handle(options)
@@ -247,18 +234,20 @@ class AdminAccountHandler(AbstractHandler):
             with Session(options.engine, future=True) as session:
                 statement = (
                     select(User)
-                    .join(User.scopes)
-                    .where(User.scopes.any(Scope.scope == "admin"))
+                    .join(User.roles)
+                    .where(User.roles.any(Role.role == "admin"))
                     .where(User.username == options.admin_user)
                 )
                 results = session.execute(statement).all()
                 options.log.debug(f"Found admins: {results}")
                 if not results:
                     options.log.debug("Empty admin set. Initializing admin accounts.")
-                    admin = User.create_hashed_user(username=options.admin_user, password=options.admin_pw)
-                    statement = select(Scope).filter_by(scope="admin")
-                    scope: Scope = session.execute(statement).scalar_one()
-                    admin.scopes.append(scope)
+                    admin = User.create_hashed_user(
+                        username=options.admin_user, password=options.admin_pw
+                    )
+                    statement = select(Role).filter_by(role="admin")
+                    scope: Role = session.execute(statement).scalar_one()
+                    admin.roles.append(scope)
                     session.add(admin)
                     session.commit()
                 else:
@@ -268,10 +257,10 @@ class AdminAccountHandler(AbstractHandler):
 
 
 def __get_handler_list__() -> List[Handler]:
-    handlers: List[Handler] = list()
+    handlers: List[Handler] = []
     handlers.append(EnvironmentHandler())
     handlers.append(LogFileHandler())
     handlers.append(DatabaseConnectionUrlHandler())
-    handlers.append(DefaultScopesHandler())
+    handlers.append(DefaultRolesHandler())
     handlers.append(AdminAccountHandler())
     return handlers
