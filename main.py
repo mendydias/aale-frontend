@@ -1,4 +1,7 @@
-from rauth.bootstrap import Config
+"""
+the entry point to the application
+"""
 
-global_context = Config(options=None).init()
-print(global_context)
+from fastapi import FastAPI
+
+app = FastAPI()
