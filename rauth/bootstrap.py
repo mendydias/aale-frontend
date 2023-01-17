@@ -2,7 +2,7 @@
 This class gets the following options from the environment:
 OAUTH2_ADMIN: admin user
 OAUTH2_ADMIN_PASSWORD: admin password
-OAUTH2_LOG_FILE: log file (default is oauth2.log)
+OAUTH2_LOG_FILE: log file (default is default.log)
 OAUTH2_DB: Database connection url
 OAUTH2_ENV: development or production
 
@@ -47,6 +47,7 @@ class GlobalContext(Options):
     engine: Any
     log: Any
     session: Any
+    log_file: str
 
     def get_logger(self, name: str) -> Any:
         """
@@ -121,7 +122,10 @@ class Config(object):
         self.startup_chain[0].handle(self.options)
         global_session = sessionmaker(bind=self.options.engine)
         global_context = GlobalContext(
-            engine=self.options.engine, log=self.options.log, session=global_session
+            engine=self.options.engine,
+            log=self.options.log,
+            session=global_session,
+            log_file=self.options.log_file,
         )
         global_context.log.info("Application ready.")
         return global_context
@@ -167,6 +171,7 @@ class LogFileHandler(AbstractHandler):
                     level=logging.ERROR,
                     format="%(asctime)s %(levelname)s %(message)s",
                 )
+            open(options.log_file, 'a', encoding='utf-8').close()
             log = logging.getLogger("Bootstrap")
             options.log = log
             log.info("Set up log file. Logging to %s", options.log_file)
